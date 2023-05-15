@@ -1,0 +1,40 @@
+<html>
+  <head>
+    
+   <center> <title>Time Minute Converter</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h2>Time Minute Converter</h2>
+    <p>Enter a number of minutes to convert:</p>
+    <input type="number" id="minutesInput">
+    <br>
+    <br>
+    <button onclick="convertToSeconds()">Convert to Seconds</button>
+    <button onclick="convertToHours()">Convert to Hours</button>
+    <button onclick="convertToDays()">Convert to Days</button>
+    <br>
+    <br>
+    <p id="output"></p>
+    <script>
+      function convertToSeconds() {
+        let minutes = document.getElementById("minutesInput").value;
+        let seconds = minutes * 60;
+        document.getElementById("output").innerHTML = seconds + " seconds";
+      }
+
+      function convertToHours() {
+        let minutes = document.getElementById("minutesInput").value;
+        let hours = minutes / 60;
+        document.getElementById("output").innerHTML = hours + " hours";
+      }
+
+      function convertToDays() {
+        let minutes = document.getElementById("minutesInput").value;
+        let days = minutes / 1440;
+        document.getElementById("output").innerHTML = days + " days";
+      }
+    </script>
+  </body> </center>
+
+</html>
